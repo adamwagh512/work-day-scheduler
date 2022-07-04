@@ -1,13 +1,14 @@
 var today = moment();
-var scheduleTime = '';
-var descriptiontest = document.querySelector('description')
+var scheduleTime = $('.hour');
 
 $("#currentDay").text(today.format('MMMM Do YYYY'))
 
 var currentTime = moment().hour()
 console.log(currentTime)
 
-console.log(descriptiontest)
+console.log(scheduleTime[0])
+let result = scheduleTime[0].slice(0,1);
+
 // if scheduleTime > currentTime {
 //     .addclass('future');
 // }else if scheduleTime == currentTime {
@@ -15,3 +16,6 @@ console.log(descriptiontest)
 // }else {
 //     .addclass('future')
 // }
+
+$(".hour").each(function () {
+    console.log(this)})
