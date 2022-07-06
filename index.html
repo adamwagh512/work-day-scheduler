@@ -4,21 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Links bootstrap style sheet -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
-    <link
+    <!-- Links fontAwsome Style Sheet -->
+    <!-- <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
-    />
+    /> -->
+    <!-- Links google style sheet -->
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <!-- Links provided style sheet -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- Title for our tab -->
     <title>Work Day Scheduler</title>
   </head>
 
@@ -26,93 +31,104 @@
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
+     <!-- Sets the current day as described in the javascript -->
       <p id="currentDay" class="lead"></p>
     </header>
+    
+    <!-- Main body of our app, Divided into 1 hour segments -->
     <div class="container">
-      <div class="row time-block">
+      <!-- Assigns the time-block value to 8 -->
+      <div class="row time-block" value = 8>
         <div class="col-md-1 hour"> 08:00 </div>
-        <textarea class="col-md-10 description"></textarea>
-        <div class="col-1 saveBtn btn"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+        <!-- This section deals with the text area  -->
+        <textarea id="1a"  class="col-md-10 description" data-text="8am"></textarea>
+        <!--This section deals with the save button on this row  -->
+        <div class="col-1 saveBtn btn" data-time="8"> 
+          <!-- imports the icon for the save button -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
           <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
         </svg></div>
       </div>
   
-      <div class="row time-block">
+      <div class="row time-block" value = 9>
         <div class="col-md-1 hour"> 09:00 </div>
-        <textarea class="col-md-10 description"></textarea>
-        <div class="col-1 saveBtn btn"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+        <textarea id= '1b' class="col-md-10 description"></textarea>
+        <div class="col-1 saveBtn btn" data-time="9"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
           <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
         </svg></div>
       </div>
   
-      <div class="row time-block">
+      <div class="row time-block" value = 10>
         <div class="col-md-1 hour"> 10:00 </div>
-        <textarea class="col-md-10 description"></textarea>
-        <div class="col-1 saveBtn btn"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+        <textarea id="1c" class="col-md-10 description"></textarea>
+        <div class="col-1 saveBtn btn" data-time="10"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
           <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
         </svg></div>
       </div>
   
-      <div class="row time-block">
+      <div class="row time-block" value = 11>
         <div class="col-md-1 hour"> 11:00 </div>
-        <textarea class="col-md-10 description"></textarea>
-        <div class="col-1 saveBtn btn"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+        <textarea id="1d" class="col-md-10 description"></textarea>
+        <div class="col-1 saveBtn btn" data-time="11"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
           <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
         </svg></div>
       </div>
   
-      <div class="row time-block">
+      <div class="row time-block" value = 12>
         <div class="col-md-1 hour"> 12:00 </div>
-        <textarea class="col-md-10 description"></textarea>
-        <div class="col-1 saveBtn btn"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+        <textarea id="1e" class="col-md-10 description"></textarea>
+        <div class="col-1 saveBtn btn" data-time="12"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
           <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
         </svg></div>
       </div>
   
-      <div class="row time-block">
+      <div class="row time-block" value = 13>
         <div class="col-md-1 hour"> 13:00 </div>
-        <textarea class="col-md-10 description"></textarea>
-        <div class="col-1 saveBtn btn"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+        <textarea id="1f" class="col-md-10 description"></textarea>
+        <div class="col-1 saveBtn btn" data-time="13"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
           <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
         </svg></div>
       </div>
   
-      <div class="row time-block">
+      <div class="row time-block" value = 14>
         <div class="col-md-1 hour"> 14:00 </div>
-        <textarea class="col-md-10 description"></textarea>
-        <div class="col-1 saveBtn btn"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+        <textarea id="1g" class="col-md-10 description"></textarea>
+        <div class="col-1 saveBtn btn" data-time="14"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
           <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
         </svg></div>
       </div>
   
-      <div class="row time-block">
+      <div class="row time-block" value =15>
         <div class="col-md-1 hour"> 15:00 </div>
-        <textarea class="col-md-10 description"></textarea>
-        <div class="col-1 saveBtn btn"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+        <textarea id="1h" class="col-md-10 description"></textarea>
+        <div class="col-1 saveBtn btn" data-time="15"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
           <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
         </svg></div>
       </div>
   
-      <div class="row time-block">
+      <div class="row time-block" value =16>
         <div class="col-md-1 hour"> 16:00 </div>
-        <textarea class="col-md-10 description"></textarea>
-        <div class="col-1 saveBtn btn"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+        <textarea id="1i" class="col-md-10 description"></textarea>
+        <div class="col-1 saveBtn btn" data-time="16"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
           <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
         </svg></div>
       </div>
 
-      <div class="row time-block">
+      <div class="row time-block" value =17>
         <div class="col-md-1 hour"> 17:00 </div>
-        <textarea class="col-md-10 description"></textarea>
-        <div class="col-1 saveBtn btn"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+        <textarea id="1j" class="col-md-10 description"></textarea>
+        <div class="col-1 saveBtn btn" data-time="17"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
           <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
         </svg></div>
       </div>
   
   
     </div>
+    <!-- links jquery script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Links moments.js script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <!-- Links my script -->
     <script src="./assets/javascript/style.js"></script>
     
 
